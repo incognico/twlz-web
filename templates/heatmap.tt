@@ -1,0 +1,65 @@
+[% INCLUDE header.tt %]                                                                                                                     
+<div class="content">                                                                                   
+   <div class="content-subhead">
+      <p>The twilightzone Sven Co-op <strong>Player Location Heatmap</strong> data is updated once a day.<br>
+   </div>
+<div class="content-container">
+    <div id="map" style="height: 40em;"></div>
+    <script>
+      var map, heatmap;
+
+      function initMap() {
+        var customMapType = new google.maps.StyledMapType([
+        {
+          stylers: [
+            {saturation: -50},
+            {lightness: 5}
+          ]
+        },
+		  {
+		    featureType: 'water',
+		    stylers: [{lightness: 75}]
+		  },
+		  {
+		    featureType: 'road',
+          elementType: 'all',
+		    stylers: [{visibility: 'off'}]
+		  }
+        ], {
+            name: 'Light'
+        });
+        var customMapTypeId = 'custom_style';
+
+          map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: {lat: 35, lng: 7.5},
+          mapTypeControlOptions: {
+            mapTypeIds: [google.maps.MapTypeId.ROADMAP, customMapTypeId]
+          }
+        });
+
+        map.mapTypes.set(customMapTypeId, customMapType);
+        map.setMapTypeId(customMapTypeId);
+
+        heatmap = new google.maps.visualization.HeatmapLayer({
+          data: getPoints(),
+          map: map,
+          radius: 40
+        });
+      }
+
+      function getPoints() {
+        return [
+           [% FOR latlon %][% IF lat && lon && joins %]{location: new google.maps.LatLng([% lat %],[% lon %]), weight: [% joins %]},[% END %][% END %]
+        ];
+      }
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=[% mapsapikey %]&signed_in=true&libraries=visualization&callback=initMap">
+    </script>
+</div>
+    <div class="footer links">
+       <p>Powered by <a href="https://github.com/incognico/svenstats">svenstats</a><br><span class="smaller" title="nico@lifeisabug.com">&copy; 2016-2019 nico</span></p>
+    </div>
+</div>
+[% INCLUDE footer.tt %]

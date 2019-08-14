@@ -1,0 +1,146 @@
+[% INCLUDE header.tt %]
+<div class="content">
+<div class="content-container">
+   <a href="https://www.gametracker.com/server_info/207.180.223.40:27015/" target="_blank"><img src="https://cache.gametracker.com/server_info/207.180.223.40:27015/b_560_95_1.png" width="560" height="95" alt="Server Information"/></a>
+</div>
+<div class="content-container">
+   <h3>Contact & Chat</h3>
+   <p><span class="bold">Discord: <a href="https://discord.gg/qfZxWAd">discord.gg/qfZxWAd</a></p>
+</div>
+<div class="content-container">
+   <h3>Player Models</h3>
+   <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (6633 models, ~1.9 GiB download size, ~9 GiB extracted).<br>Last updated: <span class="bold">2019-03-10</span></p>
+</div>
+<div class="content-container">
+   <h3>Chat Commands</h3>
+   <p>All commands are chat commands. To use, type them into the in-game chat as you would talk to other players.</p>
+   <table class="pure-table pure-table-horizontal pure-table-striped">
+       <thead>
+         <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td>!speedometer</td>
+          <td>Toggles the speedometer which displays your current speed.</td>
+      </tr>
+       <tr>
+          <td>diff</td>
+          <td>Shows the current difficulty. Dynamic difficulty is only enabled on big campaigns.</td>
+       </tr>
+       <tr>
+          <td>wheelchairs?</td>
+          <td>Starts a vote to, well, place players in wheelchairs.</td>
+       </tr>
+       <tr>
+          <td>partymode?</td>
+          <td>Starts a vote to enable or disable the party mode.</td>
+       </tr>
+       <tr>
+          <td>glow &lt;color&gt;</td>
+          <td>Makes you glow shiney. Replace &lt;color&gt; with a color name from the <a href="[% mainurl %]/colors">color list</a>.</td>
+       </tr>
+       <tr>
+          <td>trail &lt;color&gt; [spritename]</td>
+          <td>Gives you a shiney trail. Replace &lt;color&gt; with a color name from the <a href="[% mainurl %]/colors">color list</a>. Available sprites: lightning, smokey, fatline, thinline, point, squarewave or omit the sprites name for the default sprite. </td>
+       </tr>
+       <tr>
+          <td>hat &lt;name|menu&gt;</td>
+          <td>Wear a hat. See "hat menu" for available hats or use "hat hatname" to directly wear the specified one.</td>
+       </tr>
+       <tr>
+          <td>rtv</td>
+          <td>RTV: Rocks the vote. Enough other players must also rock the vote.</td>
+       </tr>
+       <tr>
+          <td>nom[inate] [mapname]</td>
+          <td>RTV: Nominates a given map. If no map is specified a menu will open.</td>
+       </tr>
+       <tr>
+          <td>listnom</td>
+          <td>RTV: Shows all nominated maps. Alternative: "nomlist"</td>
+       </tr>
+       <tr>
+          <td>listmaps</td>
+          <td>RTV: Shows all voteable maps (outputs to console). Alternative: "maplist"</td>
+       </tr>
+       <tr>
+          <td>&lt;soundtrigger&gt;</td>
+          <td>Some words trigger sounds. See the corresponding console command to list them.</td>
+       </tr>
+    </tbody>
+   </table>
+</div>
+<div class="content-container">
+   <h3>Console Commands</h3>
+   <p>All commands are console commands. To use, type them into the console. You can also bind those commands in your config.<br>
+   Commands with a * appended in the description also work in the chat.</p>
+   <table class="pure-table pure-table-horizontal pure-table-striped">
+       <thead>
+         <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr>
+          <td>.vc &lt;1|2&gt;</td>
+          <td>Opens the voice command menu 1 or 2. *</td>
+      </tr>
+       <tr>
+          <td>.vc voice</td>
+          <td>Opens a menu to change your current voice. *</td>
+      </tr>
+       <tr>
+          <td>.vc pitch &lt;25-255&gt;</td>
+          <td>Sets your pitch for voice commands. *</td>
+      </tr>
+       <tr>
+          <td>.vc vol &lt;0-100&gt;</td>
+          <td>Adjusts all voice command volumes. Use 0 to mute them. *</td>
+      </tr>
+       <tr>
+          <td>.cspitch &lt;25-255&gt;</td>
+          <td>Sets your pitch for chat sound triggers. *</td>
+      </tr>
+       <tr>
+          <td>.listsounds</td>
+          <td>Displays a list of all currently available chat sound triggers.</td>
+      </tr>
+       <tr>
+          <td>.listmodels</td>
+          <td>Displays a list of all players with their values of model name, topcolor and bottomcolor.</td>
+      </tr>
+       <tr>
+          <td>.pastmaplist</td>
+          <td>Displays the last maps who were played and the server won't use as nextmap.</td>
+      </tr>
+      <!-- <tr>
+          <td>.lost</td>
+          <td>Displays overhead nicknames and distance of other players (even through walls).</td>
+      </tr>
+       <tr>
+          <td>.lost &lt;nickname&gt;</td>
+          <td>Displays overhead nicknames and distance of the given nick or even a partitial nick.</td>
+      </tr>
+       <tr>
+          <td>.lost \</td>
+          <td>Displays overhead nicknames of all other players in sight (not through walls).</td>
+       </tr>
+       -->
+    </tbody>
+   </table>
+</div>
+<div class="content-container">
+   <h3>Current Mapcycle</h3>
+   <p><a href="http://207.180.223.40:8889/sc5/mapcycle.txt">mapcycle.txt</a> - Many more maps are available in the votemap menu, see below.</p>
+</div>
+<div class="content-container">
+   <h3>All Voteable Maps</h3>
+   <p><a href="http://207.180.223.40:8889/sc5/mapvote.txt">mapvote.txt</a> - Some of those maps are missing a game_end and you have to rtv at some point.</p>
+</div>
+   <div class="footer"><p>Good Luck and Have Fun!</p></div>
+</div>
+[% INCLUDE footer.tt %]

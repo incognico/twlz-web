@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+RewriteRule ^info/?$ index.cgi?dest=info [L]
+RewriteRule ^colors/?$ index.cgi?dest=colors [L]
+RewriteRule ^heatmap/?$ index.cgi?dest=heatmap [L]
+RewriteRule ^furry/?$ index.cgi?dest=furry [L]
+RewriteRule ^activeonly/?$ index.cgi?dest=stats&activeonly=1 [QSA,L]
+RewriteRule ^([0-9]+)/activeonly/?$ index.cgi?dest=stats&page=$1&activeonly=1 [QSA,L]
+RewriteRule ^([0-9]+)/?$ index.cgi?dest=stats&page=$1 [QSA,L]

@@ -1,0 +1,35 @@
+[% INCLUDE header.tt %]
+<div class="content">
+   <div class="content-subhead">
+      <p>The twilightzone Sven Co-op <strong>Top 50 Map Statistics</strong> are updated every 24h.</p>
+   </div>
+<div class="content-container">
+<table class="pure-table pure-table-horizontal pure-table-striped">
+    <thead>
+       <tr>
+            <th>Mapname</th>
+            <th>Playcount</th>
+        </tr>
+    </thead>
+    <tbody>
+   [% IF sql %]
+   [% FOR sql %]
+        <tr>
+            <td>[%  %]</td>
+            <td>[%  %]</td>
+        </tr>
+   [% END %]
+   [% END %]
+    </tbody>
+</table>
+</div>
+   [% IF sql.size == 0 %]
+   <div class="content-container">
+      <p>No results were returned <span class="bigger">&#x2639;</span></p>
+   </div>
+   [% END %]
+   <div class="footer links">
+      <p>Powered by <a href="https://github.com/incognico/svenstats">svenstats</a><br><span class="smaller" title="nico@lifeisabug.com">&copy; 2016 nico</span></p>
+   </div>
+</div>
+[% INCLUDE footer.tt %]

@@ -1,0 +1,51 @@
+[% INCLUDE header.tt %]
+<div class="content">
+<div class="content-container">
+   <p><span class="flag flag-tr"></span> Furry_Song_v2: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/Furry_Song_v2.mp3" type="audio/mp3">
+     <strong>Your browser does not support the audio element.</strong>
+   </audio>
+   </p>
+   <p><span class="flag flag-tr"></span> Furrywave: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/Furrywave.mp3" type="audio/mp3">
+   </audio>
+   </p>
+   <p><span class="flag flag-tr"></span> Get_out_of_here_Furry: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/Get_out_of_here_Furry.mp3" type="audio/mp3">
+   </audio>
+   </p>
+   <p><span class="flag flag-tr"></span> furryrekt: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/furryrekt.ogg" type="audio/ogg">
+   </audio>
+   </p>
+   <p><span class="flag flag-tr"></span> furryrandom: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/furryrandom.mp3" type="audio/mp3">
+   </audio>
+   </p>
+   <p><span class="flag flag-tr"></span> hello_sonofabitches_motherfuckers_bastards_sonofbitches_faggots_motherfuckers_uhh_the_cyka_blyat: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/hello_sonofabitches_motherfuckers_bastards_sonofbitches_faggots_motherfuckers_uhh_the_cyka_blyat.mp3" type="audio/mp3">
+   </audio>
+   </p>
+   <p><span class="flag flag-tr"></span> furry_uhh: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/furry_uhh.mp3" type="audio/mp3">
+   </audio>
+   </p>
+   <p><span class="flag flag-tr"></span> no_biba_no: <span class="flag flag-tr"></span><br>
+   <audio controls preload="none">
+     <source src="m/no_biba_no.mp3" type="audio/mp3">
+   </audio>
+   </p>
+</div>
+<div class="content-container">
+   <img src="m/biba.jpg" width="480" height="270" alt="Biba"></img>
+</div>
+<div class="footer"><p>NO BIBA, NO!</p></div>
+</div>
+[% INCLUDE footer.tt %]

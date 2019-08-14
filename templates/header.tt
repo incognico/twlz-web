@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>[% title %]</title>
+   <meta name="description" content="[% description %]">
+   <link rel="stylesheet" href="[% mainurl %]/static/css/pure-min.css">
+   <link rel="stylesheet" href="[% mainurl %]/static/css/style.css">
+   <link rel="stylesheet" href="[% mainurl %]/static/css/flags.css">
+   <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300%7cSource+Sans+Pro:400,700%7cSource+Code+Pro&amp;subset=latin,latin-ext'>
+</head>
+<body>
+<div id="layout">
+   <a href="#menu" id="menuLink" class="menu-link"><span></span></a>
+   <div id="menu">
+      <div class="pure-menu pure-menu-open">
+         <a class="pure-menu-heading" href="[% mainurl %]">TWLZ</a>
+         <ul>
+		    <li class="menu-item-divided[% IF dest == 'info' %] pure-menu-selected[% END %]"><a title="Info" href="[% mainurl %]/info">Info</a></li>
+          <li class="menu-item-divided[% IF dest == 'heatmap' %] pure-menu-selected[% END %]"><a title="Heatmap" href="[% mainurl %]/heatmap">Heatmap</a></li>
+          <!-- <li class="menu-item-divided[% IF dest == 'stats' %] pure-menu-selected[% END %]"><a title="Stats" href="[% mainurl %]">Stats</a></li> -->
+          <!--- <li class="menu-item-divided[% IF dest == 'furry' %] pure-menu-selected[% END %]"><a title="*[TUF]*FuRRY" href="[% mainurl %]/furry">*[TUF]*FuRRY</a></li> -->
+          <li class="menu-item-divided"><a class="extlink" target="_blank" title="Discord Chat" href="https://discord.gg/qfZxWAd">Discord</a></li>
+          <li class="menu-item-divided"><a class="extlink" target="_blank" title="Donate" href="https://paypal.me/twlz">Donate</a></li>
+         </ul>
+      </div>
+   </div>
+   <div id="main">
+      <div class="header">
+         <h1><a href="[% mainurl %]">TWLZ</a></h1>
+         <h2 class="links">Connect: <a href="steam://connect/207.180.223.40:27015">207.180.223.40:27015</a> (Location: EU)</h2>
+         <h2 class="links">Join the <a href="https://steamcommunity.com/groups/twlzsc">twlzsc Steam Group</a></h2>
+      </div>

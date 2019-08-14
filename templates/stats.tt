@@ -1,0 +1,60 @@
+[% INCLUDE header.tt %]
+<div class="content">
+   <div class="content-subhead">
+      <p>The twilightzone Sven Co-op <strong>Player Statistics</strong> are updated every 24h. Values in parentheses represent the last 24h-period.<br>
+      [% totalplayers %] players have [% IF activeonly %]been active in the last 24h [% ELSE %] spent more than [% dplim %] [% END %] on the server and are listed below.</p>
+   </div>
+   <div class="content-subhead">
+      <p><a class="pure-button" href="[% mainurl %][% IF NOT activeonly %]/activeonly[% END %]">Toggle between last active/all players</a></p>
+   </div>
+<div class="content-container">
+<table class="pure-table pure-table-horizontal pure-table-striped">
+    <thead>
+       <tr>
+            <th>#</th>
+            <th></th>
+            <th></th>
+            <th>Player</th>
+            <th>Score</th>
+            <th>Deaths</th>
+            <th>Playtime</th>
+        </tr>
+    </thead>
+    <tbody>
+   [% IF sql %]
+   [% j = 0 %]
+   [% FOR sql %]
+   [% j = j + 1 %]
+        <tr>
+            <td>[% j + ((statsperpage * page) - statsperpage) %]</td>
+            <td><span class="flag flag-[% geo.lower() %]" title="[% geo %]"></span></td>
+            <td><a href="[% steamapi.item(steamid64).profileurl %]"><img style="display:block;" alt="img" title="[% steamapi.item(steamid64).personaname %]" src="[% steamapi.item(steamid64).avatar %]" /></a></td>
+            <td title="[% name %][% UNLESS steamapi.item(steamid64).personaname == name %] ([% steamapi.item(steamid64).personaname %])[% END %]"><strong><a href="[% steamapi.item(steamid64).profileurl %]">[% trname %]</a></strong></td>
+            <td><span class="lshad">[% score %]</span>[% IF scoregain != 0 %]<br><i>([% IF scoregain > 0 %]<span class="plus">+[% ELSE %]<span class="minus">[% END %][% scoregain %]</span>)</i>[% END %]</td>
+            <td>[% deaths %][% IF deathgain > 0 %]<br><i>(+[% deathgain %])</i>[% END %]</td>
+            <td>[% playtime %][% IF playtimegain %]<br><i>(<span class="plus">+[% playtimegain %]</span>)</i>[% END %]</td>
+        </tr>
+   [% END %]
+   [% END %]
+    </tbody>
+</table>
+</div>
+   [% IF pages.size > 1 %]
+   <div class="content-subhead">
+      [% INCLUDE pageselector.tt %]
+   </div>
+   [% END %]
+   [% IF sql.size == 0 %]
+   <div class="content-container">
+      <p>No results were returned <span class="bigger">&#x2639;</span></p>
+   </div>
+   [% END %]
+   <div class="content-container">
+      <p><strong>Unique players the server has seen:</strong> [% alltotalplayers %]</p>
+      <p>Some maps are not counting towards stats.<p>
+   </div>
+   <div class="footer links">
+      <p>Powered by <a href="https://github.com/incognico/svenstats">svenstats</a> &amp; <a href="http://steampowered.com">Steam</a><br><span class="smaller" title="nico@lifeisabug.com">&copy; 2016-2019 nico</span></p>
+   </div>
+</div>
+[% INCLUDE footer.tt %]
