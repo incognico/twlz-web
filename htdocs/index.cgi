@@ -181,7 +181,7 @@ elsif (0) {
    my @steamidlist;
 
    for (@{$$ttvars{sql}}) {
-      $_->{trname}       = encode_entities(Encode::decode_utf8(truncstr($_->{name}, 28, '..')));
+      $_->{trname}       = encode_entities(truncstr(Encode::decode_utf8($_->{name}), 28, '..'));
       $_->{name}         = encode_entities(Encode::decode_utf8($_->{name}));
       $_->{score}        = ceil($_->{score});
       $_->{scoregain}    = ceil($_->{scoregain});
