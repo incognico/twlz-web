@@ -12,7 +12,6 @@ no warnings 'experimental::smartmatch';
 use CGI ':standard';
 use CGI::Carp qw(fatalsToBrowser warningsToBrowser);
 use DBI;
-use Encode;
 use Encode::Simple qw(encode_utf8 decode_utf8);
 use HTML::Entities;
 use JSON;
