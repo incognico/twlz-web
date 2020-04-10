@@ -5,7 +5,7 @@
       [% totalplayers %] players have [% IF activeonly %]been active in the last 24h [% ELSE %] spent more than [% dplim %] [% END %] on the server and are listed below.</p>
    </div>
    <div class="content-subhead">
-      <p><a class="pure-button" href="[% mainurl %][% IF NOT activeonly %]/activeonly[% END %]">Toggle between last active/all players</a></p>
+      <p><a class="pure-button" href="[% mainurl %]/stats[% IF NOT activeonly %]/activeonly[% END %]">Toggle between last active/all players</a></p>
    </div>
 <div class="content-container">
 <table class="pure-table pure-table-horizontal pure-table-striped">

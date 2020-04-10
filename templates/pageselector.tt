@@ -2,7 +2,7 @@
 [% IF page == 1 %]
    <li><a class="pure-button pure-button-disabled prev" href="#">&#171;</a></li>
 [% ELSE %]
-   <li><a class="pure-button prev" href="[% mainurl %]/[% page - 1 %][% IF activeonly %]/activeonly[% END %]" title="Go to page [% page - 1 %]">&#171;</a><li>
+   <li><a class="pure-button prev" href="[% mainurl %]/stats/[% page - 1 %][% IF activeonly %]/activeonly[% END %]" title="Go to page [% page - 1 %]">&#171;</a><li>
 [% END %]
 [% FOREACH p IN pages %]
    [% IF p == page %]
@@ -10,11 +10,11 @@
    [% ELSIF p == '..' %]
       <li><a class="pure-button pure-button-disabled" href="#">[% p %]</a></li>
    [% ELSE %]
-      <li><a class="pure-button" href="[% mainurl %]/[% p %][% IF activeonly %]/activeonly[% END %]" title="Go to page [% p %]">[% p %]</a></li>
+      <li><a class="pure-button" href="[% mainurl %]/stats/[% p %][% IF activeonly %]/activeonly[% END %]" title="Go to page [% p %]">[% p %]</a></li>
    [% END %]
 [% END %]
 [% IF pagecount > page %]
-   <li><a class="pure-button next" href="[% mainurl %]/[% page + 1 %][% IF activeonly %]/activeonly[% END %]" title="Go to page [% page + 1 %]">&#187;</a><li>
+   <li><a class="pure-button next" href="[% mainurl %]/stats/[% page + 1 %][% IF activeonly %]/activeonly[% END %]" title="Go to page [% page + 1 %]">&#187;</a><li>
 [% ELSE %]
    <li><a class="pure-button pure-button-disabled next" href="#">&#187;</a></li>
 [% END %]

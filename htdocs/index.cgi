@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# Copyright 2016-2019 Nico R. Wohlgemuth
+# Copyright 2016-2020 Nico R. Wohlgemuth
 
 use utf8;
 use strict;
@@ -13,6 +13,7 @@ use CGI ':standard';
 use CGI::Carp qw(fatalsToBrowser warningsToBrowser);
 use DBI;
 use Encode;
+use Encode::Simple qw(encode_utf8 decode_utf8);
 use HTML::Entities;
 use JSON;
 use LWP::Simple '!head';
@@ -181,8 +182,8 @@ elsif (0) {
    my @steamidlist;
 
    for (@{$$ttvars{sql}}) {
-      $_->{trname}       = encode_entities(Encode::decode_utf8(truncstr($_->{name}, 28, '..')));
-      $_->{name}         = encode_entities(Encode::decode_utf8($_->{name}));
+      $_->{trname}       = encode_entities(decode_utf8(truncstr($_->{name}, 28, '..')));
+      $_->{name}         = encode_entities(decode_utf8($_->{name}));
       $_->{score}        = ceil($_->{score});
       $_->{scoregain}    = ceil($_->{scoregain});
       $_->{playtime}     = duration($_->{datapoints}*30);

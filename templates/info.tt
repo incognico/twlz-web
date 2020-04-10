@@ -1,7 +1,7 @@
 [% INCLUDE header.tt %]
 <div class="content">
 <div class="content-container">
-   <a href="https://www.gametracker.com/server_info/207.180.223.40:27015/" target="_blank"><img src="https://cache.gametracker.com/server_info/207.180.223.40:27015/b_560_95_1.png" width="560" height="95" alt="Server Information"/></a>
+   <a href="https://www.gametracker.com/server_info/95.179.240.172:27015/" target="_blank"><img src="https://cache.gametracker.com/server_info/95.179.240.172:27015/b_560_95_1.png" width="560" height="95" alt="Server Information"/></a>
 </div>
 <div class="content-container">
    <h3>Contact & Chat</h3>
@@ -9,7 +9,8 @@
 </div>
 <div class="content-container">
    <h3>Player Models</h3>
-   <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (6633 models, ~1.9 GiB download size, ~9 GiB extracted).<br>Last updated: <span class="bold">2019-03-10</span></p>
+   <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (7205 models, ~2 GiB download size, ~10 GiB extracted).<br>Last updated: <span class="bold">2020-03-31</span></p>
+   <p>Player models can also be requested by the server, just set your "model" console variable to the desired model to download and wait for 2 map changes. If you already have set it before connecting it will only take one map change. If the server has the requested player model your client will download it.</p>
 </div>
 <div class="content-container">
    <h3>Chat Commands</h3>
@@ -22,21 +23,13 @@
         </tr>
     </thead>
     <tbody>
-      <tr>
-          <td>!speedometer</td>
-          <td>Toggles the speedometer which displays your current speed.</td>
-      </tr>
        <tr>
           <td>diff</td>
-          <td>Shows the current difficulty. Dynamic difficulty is only enabled on big campaigns.</td>
+          <td>Shows the current difficulty. Dynamic difficulty is only enabled on some maps/campaigns.</td>
        </tr>
        <tr>
-          <td>wheelchairs?</td>
-          <td>Starts a vote to, well, place players in wheelchairs.</td>
-       </tr>
-       <tr>
-          <td>partymode?</td>
-          <td>Starts a vote to enable or disable the party mode.</td>
+          <td>speedometer</td>
+          <td>Toggles the speedometer which displays your current speed.</td>
        </tr>
        <tr>
           <td>glow &lt;color&gt;</td>
@@ -67,6 +60,18 @@
           <td>RTV: Shows all voteable maps (outputs to console). Alternative: "maplist"</td>
        </tr>
        <tr>
+          <td>pandemic?</td>
+          <td>Hazmat up.</td>
+       </tr>
+       <!-- <tr>
+          <td>wheelchairs?</td>
+          <td>Starts a vote to, well, place players in wheelchairs.</td>
+       </tr> -->
+       <tr>
+          <td>partymode?</td>
+          <td>Starts a vote to enable or disable the party mode.</td>
+       </tr>
+       <tr>
           <td>&lt;soundtrigger&gt;</td>
           <td>Some words trigger sounds. See the corresponding console command to list them.</td>
        </tr>
@@ -85,6 +90,14 @@
         </tr>
     </thead>
     <tbody>
+       <tr>
+          <td>.nightvision</td>
+          <td>Toggles nightvision.</td>
+      </tr>
+       <tr>
+          <td>.e</td>
+          <td>Prints emote usage. *</td>
+      </tr>
        <tr>
           <td>.vc &lt;1|2&gt;</td>
           <td>Opens the voice command menu 1 or 2. *</td>
@@ -135,12 +148,12 @@
 </div>
 <div class="content-container">
    <h3>Current Mapcycle</h3>
-   <p><a href="http://207.180.223.40:8889/sc5/mapcycle.txt">mapcycle.txt</a> - Many more maps are available in the votemap menu, see below.</p>
+   <p><a href="http://95.179.240.172/sc5/mapcycle.txt">mapcycle.txt</a> - Many more maps are available in the votemap menu, see below.</p>
 </div>
 <div class="content-container">
    <h3>All Voteable Maps</h3>
-   <p><a href="http://207.180.223.40:8889/sc5/mapvote.txt">mapvote.txt</a> - Some of those maps are missing a game_end and you have to rtv at some point.</p>
+   <p><a href="http://95.179.240.172/sc5/mapvote.txt">mapvote.txt</a> - Some of those maps are missing a game_end and you have to rtv at some point.</p>
 </div>
-   <div class="footer"><p>Good Luck and Have Fun!</p></div>
+<div class="footer"><p>Good Luck and Have Fun!</p></div>
 </div>
 [% INCLUDE footer.tt %]
