@@ -9,7 +9,7 @@ use warnings;
 use 5.16.0;
 no warnings 'experimental::smartmatch';
 
-use CGI ':standard';
+use CGI qw(header param -utf8);
 use CGI::Carp qw(fatalsToBrowser warningsToBrowser);
 use DBI;
 use Encode::Simple qw(encode_utf8 decode_utf8);
@@ -30,7 +30,7 @@ my $mapsapikey  = '';
 
 my $ttvars = {
    mainurl        => 'https://twlz.lifeisabug.com',
-   description    => 'twilightzone Sven Co-op Server & Player Statistics',
+   description    => 'twilightzone Sven Co-op Server',
    statsperpage   => 25,
    scorelimit     => 1500,
    datapointlimit => 720,
@@ -90,13 +90,16 @@ sub pairwise_walk(&@) {
 
 sub printheader {
    if ($debug) {
-      use Data::Dumper;
+      require Data::Dumper;
+      Data::Dumper->import;
       $$ttvars{debug} = Dumper($ttvars);
    }
 
    print header(
       -charset => 'utf-8',
    );
+
+   return;
 }
 
 my ($dbh, $stmt, @bind, $sth);
@@ -131,7 +134,8 @@ elsif ($qdest && $qdest eq 'furry') {
    $tt->process('furry.tt', $ttvars) || croak($tt->error);
 }
 #else {
-elsif (0) {
+#elsif (0) {
+elsif ($qdest && $qdest eq 'stats') {
    my @where;
 
    if ($qactiveonly) {
@@ -181,7 +185,7 @@ elsif (0) {
    my @steamidlist;
 
    for (@{$$ttvars{sql}}) {
-      $_->{trname}       = encode_entities(decode_utf8(truncstr($_->{name}, 28, '..')));
+      $_->{trname}       = encode_entities(truncstr(decode_utf8($_->{name}), 28, '..'));
       $_->{name}         = encode_entities(decode_utf8($_->{name}));
       $_->{score}        = ceil($_->{score});
       $_->{scoregain}    = ceil($_->{scoregain});
@@ -200,7 +204,7 @@ elsif (0) {
       shift(@pages);
    }
 
-   while ($pages[$#pages] > $$ttvars{pagecount}) {
+   while ($pages[-1] > $$ttvars{pagecount}) {
       pop(@pages);
    }
 
@@ -210,7 +214,7 @@ elsif (0) {
    $steamids .= pop(@steamidlist) . ',' while (@steamidlist);
 
    my $content = get($steamapiurl . $steamids);
-   die "Couldn't query Steam API. Please refresh the page." unless (defined $content);
+   croak "Couldn't query Steam API. Please refresh the page." unless (defined $content);
    my $result = decode_json($content);
 
    my %steamapi;
@@ -236,7 +240,7 @@ else {
 
 sub sqlite_connect {
    unless ($dbh = DBI->connect("DBI:SQLite:dbname=$db", '', '', { AutoCommit => 1 })) {
-      die($DBI::errstr);
+      croak($DBI::errstr);
    }
    else {
       return 0;
@@ -245,4 +249,6 @@ sub sqlite_connect {
 
 sub sqlite_disconnect {
    $dbh->disconnect;
+
+   return;
 }
