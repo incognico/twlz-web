@@ -12,7 +12,7 @@ no warnings 'experimental::smartmatch';
 use CGI qw(header param -utf8);
 use CGI::Carp qw(fatalsToBrowser warningsToBrowser);
 use DBI;
-use Encode::Simple qw(encode_utf8 decode_utf8);
+use Encode::Simple qw(encode_utf8_lax decode_utf8_lax);
 use HTML::Entities;
 use JSON;
 use LWP::Simple '!head';
@@ -185,8 +185,8 @@ elsif ($qdest && $qdest eq 'stats') {
    my @steamidlist;
 
    for (@{$$ttvars{sql}}) {
-      $_->{trname}       = encode_entities(truncstr(decode_utf8($_->{name}), 28, '..'));
-      $_->{name}         = encode_entities(decode_utf8($_->{name}));
+      $_->{trname}       = encode_entities(truncstr(decode_utf8_lax($_->{name}), 28, '..'));
+      $_->{name}         = encode_entities(decode_utf8_lax($_->{name}));
       $_->{score}        = ceil($_->{score});
       $_->{scoregain}    = ceil($_->{scoregain});
       $_->{playtime}     = duration($_->{datapoints}*30);
