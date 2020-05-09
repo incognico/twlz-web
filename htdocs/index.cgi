@@ -74,7 +74,7 @@ sub duration {
 #            ($gmt[0] ? ($gmt[5] || $gmt[7] || $gmt[2] || $gmt[1] ? ' ' : '').$gmt[0].'s' : '');
 }
 
-sub pairwise_walk(&@) {
+sub pairwise_walk {
    my ($code, $prev) = (shift, shift);
    my @ret;
 
@@ -208,7 +208,7 @@ elsif ($qdest && $qdest eq 'stats') {
       pop(@pages);
    }
 
-   @pages = pairwise_walk { $a+1 == $b ? $b : ('..', $b) } @pages;
+   @pages = pairwise_walk sub { $a+1 == $b ? $b : ('..', $b) }, @pages;
 
    my $steamids;
    $steamids .= pop(@steamidlist) . ',' while (@steamidlist);
