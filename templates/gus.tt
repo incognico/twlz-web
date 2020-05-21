@@ -1,0 +1,67 @@
+[% INCLUDE header.tt %]
+<div class="content">
+<div class="content-container">
+   <h3>Gus commands</h3>
+   <p class="mono">[optional] &mdash; &lt;required&gt; &mdash; |=or</p>
+   <table class="pure-table pure-table-horizontal pure-table-striped">
+       <thead>
+         <tr>
+            <th>Command</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+       <tr>
+          <td>!set steamid &lt;SteamID&gt;</td>
+          <td>Registers your SteamID with Gus, required for using the #svencoop chat relay in Discord. Example: !set steamid STEAM_0:0:123456</td>
+       </tr>
+       <tr>
+          <td>!set linknick &lt;0|1&gt;</td>
+          <td>If your SteamID is set and this is set to yes, your Discord nickname will be used in the #svencoop chat relay for messages your wrote in-game (instead of your in-game nick). Example: !set linknick 1</td>
+       </tr>
+       <tr>
+          <td>!set tz &lt;Time/Zone&gt;</td>
+          <td>The provided timezone will be used when specifying absolute dates/times in the reminder function. Example: !set tz Asia/Omsk</td>
+       </tr>
+       <tr>
+          <td>[!]rem[ind] [me|@someone] [in|at] &lt;MIN|[DD.MM.YYYY] HH:MM&gt; [to|that] [text] </td>
+          <td>Flexible reminding system. Reminds at the the given countdown in MIN or at the given TIME. Most words can be omited as long as you give a countdown/time/date. Examples: rem 5, !remind @Gus at 16:00 yes honey, !rem me in 10 to go home, rem 19:00 play time, remind me in 60 that one hour has passed, rem me 26.02.2033 13:00 hello from a long time ago</td>
+       </tr>
+       <tr>
+          <td>!status</td>
+          <td>Displays the current status of the TWLZ Sven Co-op gameserver.</td>
+       </tr>
+       <tr>
+          <td>!player &lt;nickname|SteamID&gt;</td>
+          <td>Fetches player information about the given player from the TWLZ svenstats database. Examples: !player nico, !player STEAM_0:0:123456</td>
+       </tr>
+       <tr>
+          <td>!w[eather] [location]</td>
+          <td>Shows the weather for the given location. If the location is omited, the last used location will be used. Example: !w Berlin</td>
+       </tr>
+       <tr>
+          <td>!imdb &lt;movie&gt; [year]</td>
+          <td>Returns movie information from IMDb. Example: !imdb The Matrix 1999. Alternatively: !movie.</td>
+       </tr>
+       <tr>
+          <td>!img [type]</td>
+          <td>Gets a random image from nekobot. Only works in #media-nsfw.</td>
+       </tr>
+       <tr>
+          <td>!ud &lt;term&gt;</td>
+          <td>Retrieves the definitions of the given term from Urban Dictionary. Only works in #media-nsfw.</td>
+       </tr>
+       <tr>
+          <td>!time [Time/Zone]</td>
+          <td>Shows the local time for the given time zone. If the zone is omited, the user set timezone will be used (if available). Example: !time Asia/Pyongyang</td>
+       </tr>
+       <tr>
+          <td>[ ] foo [ ] bar</td>
+          <td>Tickable Boxes like [ ] will get randomly ticked to help you decide something.</td>
+       </tr>
+    </tbody>
+   </table>
+</div>
+<div class="footer"><p>Oh, and Erebus commands are !xstatus and !xs &lt;id&gt;, which fetches the Xonotic Stats for the given ID.</p></div>
+</div>
+[% INCLUDE footer.tt %]

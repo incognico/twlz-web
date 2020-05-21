@@ -232,6 +232,11 @@ elsif ($qdest && $qdest eq 'stats') {
    
    $tt->process('stats.tt', $ttvars) || croak($tt->error);
 }
+elsif ($qdest && $qdest eq 'gus') {
+   $$ttvars{title} = 'Gus commands :: ' . $title;
+   printheader();
+   $tt->process('gus.tt', $ttvars) || croak($tt->error);
+}
 else {
    $$ttvars{title} = 'Info :: ' . $title;
    printheader();
