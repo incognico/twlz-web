@@ -17,7 +17,7 @@
        </tr>
        <tr>
           <td>!set linknick &lt;0|1&gt;</td>
-          <td>If your SteamID is set and this is set to yes, your Discord nickname will be used in the #svencoop chat relay for messages your wrote in-game (instead of your in-game nick). Example: !set linknick 1</td>
+          <td>If your SteamID is set and this is set to 1, your Discord nickname will be used in the #svencoop chat relay for messages your wrote in-game (instead of your in-game nick). Example: !set linknick 1</td>
        </tr>
        <tr>
           <td>!set tz &lt;Time/Zone&gt;</td>
@@ -52,8 +52,8 @@
           <td>Retrieves the definitions of the given term from Urban Dictionary. Only works in #media-nsfw.</td>
        </tr>
        <tr>
-          <td>!time [Time/Zone]</td>
-          <td>Shows the local time for the given time zone. If the zone is omited, the user set timezone will be used (if available). Example: !time Asia/Pyongyang</td>
+          <td>!time [&lt;Time/Zone|location&gt;]</td>
+          <td>Shows the local time for the given time zone ID or location. If the zone is omited, the user set timezone will be used (if available). Example: !time Asia/Pyongyang, !time Chatham Islands</td>
        </tr>
        <tr>
           <td>[ ] foo [ ] bar</td>
