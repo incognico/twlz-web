@@ -24,8 +24,8 @@
           <td>The provided timezone will be used when specifying absolute dates/times in the reminder function. Example: !set tz Asia/Omsk</td>
        </tr>
        <tr>
-          <td>[!]rem[ind] [me|@someone] [in|at] &lt;MIN|[DD.MM.YYYY] HH:MM&gt; [to|that] [text] </td>
-          <td>Flexible reminding system. Reminds at the the given countdown in MIN or at the given TIME. Most words can be omited as long as you give a countdown/time/date. Examples: rem 5, !remind @Gus at 16:00 yes honey, !rem me in 10 to go home, rem 19:00 play time, remind me in 60 that one hour has passed, rem me 26.02.2033 13:00 hello from a long time ago</td>
+          <td>[!]rem[ind] [me|@someone] [in|at] &lt;MIN|[YYYY-MM-DD] HH:MM&gt; [to|that] [text] </td>
+          <td>Flexible reminding system. Reminds at the the given countdown in MIN or at the given TIME. Most words can be omited as long as you give a countdown/time/date. Examples: rem 5, !remind @Gus at 16:00 yes honey, !rem me in 10 to go home, rem 19:00 play time, remind me in 60 that one hour has passed, rem me 2033-02-26 13:00 hello from a long time ago</td>
        </tr>
        <tr>
           <td>!status</td>
