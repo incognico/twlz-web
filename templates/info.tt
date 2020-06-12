@@ -9,7 +9,7 @@
 </div>
 <div class="content-container">
    <h3>Player Models</h3>
-   <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (7205 models, ~2 GiB download size, ~10 GiB extracted).<br>Last updated: <span class="bold">2020-03-31</span></p>
+   <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (7591 models, ~2.2 GiB download size, ~11 GiB extracted).<br>Last updated: <span class="bold">2020-06-12</span></p>
    <p>Player models can also be requested by the server, just set your "model" console variable to the desired model to download and wait for 2 map changes. If you already have set it before connecting it will only take one map change. If the server has the requested player model your client will download it.</p>
 </div>
 <div class="content-container">
@@ -97,6 +97,10 @@
        <tr>
           <td>.e</td>
           <td>Prints emote usage. *</td>
+      </tr>
+       <tr>
+          <td>.ghosts</td>
+          <td>Prints help for the configuration of ghosts when observer mode is enabled. *</td>
       </tr>
        <tr>
           <td>.vc &lt;1|2&gt;</td>
