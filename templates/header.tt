@@ -9,6 +9,7 @@
    <link rel="stylesheet" href="[% mainurl %]/static/css/style.css">
    <link rel="stylesheet" href="[% mainurl %]/static/css/flags.css">
    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Raleway:300%7cSource+Sans+Pro:400,700%7cSource+Code+Pro&amp;subset=latin,latin-ext&amp;display=swap'>
+   <link rel="icon" href="[% mainurl %]/favicon.png" type="image/png">
 </head>
 <body>
 <div id="layout">
