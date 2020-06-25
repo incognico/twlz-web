@@ -43,13 +43,13 @@
           <td>!imdb &lt;movie&gt; [year]</td>
           <td>Returns movie information from IMDb. Example: !imdb The Matrix 1999. Alternatively: !movie.</td>
        </tr>
-       <tr>
+       <!-- <tr>
           <td>!img [type]</td>
-          <td>Gets a random image from nekobot. Only works in #media-nsfw.</td>
-       </tr>
+          <td>Gets a random image from nekobot. Only works in #media.</td>
+       </tr> -->
        <tr>
           <td>!ud &lt;term&gt;</td>
-          <td>Retrieves the definitions of the given term from Urban Dictionary. Only works in #media-nsfw.</td>
+          <td>Retrieves the definitions of the given term from Urban Dictionary. Only works in #media.</td>
        </tr>
        <tr>
           <td>!time [&lt;Time/Zone|location&gt;]</td>
