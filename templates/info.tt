@@ -9,7 +9,7 @@
 </div>
 <div class="content-container">
    <h3>Player Models</h3>
-   <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (7591 models, ~2.2 GiB download size, ~11 GiB extracted).<br>Last updated: <span class="bold">2020-06-12</span></p>
+   <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (7825 models, ~2.2 GiB download size, ~11 GiB extracted).<br>Last updated: <span class="bold">2021-03-17</span></p>
    <p>Player models can also be requested by the server, just set your "model" console variable to the desired model to download and wait for 2 map changes. If you already have set it before connecting it will only take one map change. If the server has the requested player model your client will download it.</p>
 </div>
 <div class="content-container">
@@ -24,6 +24,10 @@
     </thead>
     <tbody>
        <tr>
+          <td>.help</td>
+          <td>Shows help for all available commands. Outputs to console.</td>
+      </tr>
+<!--       <tr>
           <td>diff</td>
           <td>Shows the current difficulty. Dynamic difficulty is only enabled on some maps/campaigns.</td>
        </tr>
@@ -63,10 +67,10 @@
           <td>pandemic?</td>
           <td>Hazmat up.</td>
        </tr>
-       <!-- <tr>
+       <<tr>
           <td>wheelchairs?</td>
           <td>Starts a vote to, well, place players in wheelchairs.</td>
-       </tr> -->
+       </tr>
        <tr>
           <td>partymode?</td>
           <td>Starts a vote to enable or disable the party mode.</td>
@@ -74,7 +78,7 @@
        <tr>
           <td>&lt;soundtrigger&gt;</td>
           <td>Some words trigger sounds. See the corresponding console command to list them.</td>
-       </tr>
+       </tr> -->
     </tbody>
    </table>
 </div>
@@ -91,6 +95,10 @@
     </thead>
     <tbody>
        <tr>
+          <td>.help</td>
+          <td>Shows help for all available commands. Outputs to console. *</td>
+      </tr>
+       <!-- <tr>
           <td>.nightvision</td>
           <td>Toggles nightvision.</td>
       </tr>
@@ -134,7 +142,7 @@
           <td>.pastmaplist</td>
           <td>Displays the last maps who were played and the server won't use as nextmap.</td>
       </tr>
-      <!-- <tr>
+      <tr>
           <td>.lost</td>
           <td>Displays overhead nicknames and distance of other players (even through walls).</td>
       </tr>
@@ -145,18 +153,20 @@
        <tr>
           <td>.lost \</td>
           <td>Displays overhead nicknames of all other players in sight (not through walls).</td>
-       </tr>
-       -->
+       </tr> -->
     </tbody>
    </table>
 </div>
 <div class="content-container">
+   <p><code>glow</code> and <code>trail</code> plugins use a custom <a href="[% mainurl %]/colors">color list.</a></p>
+</div>
+<div class="content-container">
    <h3>Current Mapcycle</h3>
-   <p><a href="http://95.179.240.172/sc5/mapcycle.txt">mapcycle.txt</a> - Many more maps are available in the votemap menu, see below.</p>
+   <p><a href="https://twilightzone.ftp.sh/sc5/mapcycle.txt">mapcycle.txt</a> - Many more maps are available in the votemap menu, see below.</p>
 </div>
 <div class="content-container">
    <h3>All Voteable Maps</h3>
-   <p><a href="http://95.179.240.172/sc5/mapvote.txt">mapvote.txt</a> - Some of those maps are missing a game_end and you have to rtv at some point.</p>
+   <p><a href="https://twilightzone.ftp.sh/sc5/mapvote.txt">mapvote.txt</a> - Some of those maps are missing a game_end and you have to rtv at some point.</p>
 </div>
 <div class="footer"><p>Good Luck and Have Fun!</p></div>
 </div>

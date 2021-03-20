@@ -22,15 +22,16 @@
           <li class="menu-item-divided[% IF dest == 'heatmap' %] pure-menu-selected[% END %]"><a title="Heatmap" href="[% mainurl %]/heatmap">Heatmap</a></li>
           <li class="menu-item-divided[% IF dest == 'gus' %] pure-menu-selected[% END %]"><a title="Gus Commands" href="[% mainurl %]/gus">Gus</a></li>
           <!-- <li class="menu-item-divided[% IF dest == 'stats' %] pure-menu-selected[% END %]"><a title="Stats" href="[% mainurl %]">Stats</a></li> -->
-          <!--- <li class="menu-item-divided[% IF dest == 'furry' %] pure-menu-selected[% END %]"><a title="*[TUF]*FuRRY" href="[% mainurl %]/furry">*[TUF]*FuRRY</a></li> -->
+          <!-- <li class="menu-item-divided[% IF dest == 'furry' %] pure-menu-selected[% END %]"><a title="*[TUF]*FuRRY" href="[% mainurl %]/furry">*[TUF]*FuRRY</a></li> -->
           <li class="menu-item-divided"><a rel="noopener" class="extlink" target="_blank" title="Discord Chat" href="https://discord.gg/qfZxWAd">Discord</a></li>
-          <li class="menu-item-divided"><a rel="noopener"class="extlink" target="_blank" title="Donate" href="https://paypal.me/twlz">Donate</a></li>
+          <li class="menu-item-divided"><a rel="noopener" class="extlink" target="_blank" title="Donate" href="https://paypal.me/twlz">Donate</a></li>
          </ul>
       </div>
    </div>
    <div id="main">
       <div class="header">
          <h1><a href="[% mainurl %]">TWLZ</a></h1>
-         <h2 class="links">Connect: <a href="steam://connect/95.179.240.172:27015">95.179.240.172:27015</a> (Location: EU)</h2>
+         <!-- <h2 class="links">Connect: <a href="steam://connect/95.179.240.172:27015">95.179.240.172:27015</a> (Location: EU)</h2> -->
+         <h2 class="links">Connect: <a href="steam://connect/play.lifeisabug.com">play.lifeisabug.com</a> (Location: EU)</h2>
          <h2 class="links">Join the <a href="https://steamcommunity.com/groups/twlzsc">twlzsc Steam Group</a></h2>
       </div>
