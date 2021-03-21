@@ -10,7 +10,7 @@
 <div class="content-container">
    <h3>Player Models</h3>
    <p><a href="https://distfiles.lifeisabug.com/svencoop/playermodels/svencoop_addon.7z">A huge Player Model Pack can be downloaded here</a> (7825 models, ~2.2 GiB download size, ~11 GiB extracted).<br>Last updated: <span class="bold">2021-03-17</span></p>
-   <p>Player models can also be requested by the server, just set your "model" console variable to the desired model to download and wait for 2 map changes. If you already have set it before connecting it will only take one map change. If the server has the requested player model your client will download it.</p>
+   <p>Player models can also be requested by the server, just set your "model" console variable to the desired model and wait for a map change. If the server has the requested player model all current players will download it.</p>
 </div>
 <div class="content-container">
    <h3>Chat Commands</h3>
@@ -158,7 +158,7 @@
    </table>
 </div>
 <div class="content-container">
-   <p><code>glow</code> and <code>trail</code> plugins use a custom <a href="[% mainurl %]/colors">color list.</a></p>
+   <p><span class="mono">glow</span> and <span class="mono">trail</span> plugins use a custom <a href="[% mainurl %]/colors">color list.</a></p>
 </div>
 <div class="content-container">
    <h3>Current Mapcycle</h3>
